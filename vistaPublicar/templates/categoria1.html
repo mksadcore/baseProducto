@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block contenido %}
+ <div class="main-content">
+     <div class="barra"><ul class="menu-principal" >
+              <li class="era_digital"><a href="#">Servicios</a>
+                <ul ><li><a href="#">Sub-Menu 1</a></li>
+                    <li><a href="#">Sub-Menu 2</a></li>
+                    <li><a href="#">Sub-Menu 3</a></li></ul>
+                    </li>
+                    <li class="redes"><a href="#">Productos</a>
+                <ul ><li><a href="#">Sub-Menu 1</a></li>
+                    <li><a href="#">Sub-Menu 2</a></li>
+                    <li><a href="#">Sub-Menu 3</a></li></ul>
+                    </li>
+                    <li  class="personalidad"><a href="#">Inmuebles</a>
+                <ul ><li><a href="#">Sub-Menu 1</a></li>
+                    <li><a href="#">Sub-Menu 2</a></li>
+                    <li><a href="#">Sub-Menu 3</a></li></ul>
+                    </li>
+                    <li class="novedades"><a href="#">Transporte</a>
+                <ul ><li><a href="#">Sub-Menu 1</a></li>
+                    <li><a href="#">Sub-Menu 2</a></li>
+                    <li><a href="#">Sub-Menu 3</a></li></ul>
+                    </li>
+                  <li class="profesionales"><a href="#">Novedades</a>
+                <ul ><li><a href="#">Sub-Menu 1</a></li>
+                    <li><a href="#">Sub-Menu 2</a></li>
+                    <li><a href="#">Sub-Menu 3</a></li></ul>
+              </li>
+           </ul>
+         </div>
+
+        <hr>
+             <div id="containerEx3">
+                <div class="ex3">
+                   <a href="{% url 'casas' %}"><img alt="img0" width="350" height="350" src="{% static "images/servicios-01.png" %}"></a>
+                     <a href="#"><img alt="img1" width="350" height="350" src="{% static "images/productos-01.png" %}"></a>
+                       <a href="#"><img alt="img2" width="220" height="250" src="{% static "images/inmuebles-01.jpg" %}"></a>
+                      <a href="#"><img alt="img3" width="220" height="250" src="{% static "images/transporte-01.jpg" %}"></a>
+                    <a href="#"><img alt="img4" width="220" height="250" src="{% static "images/animal.jpg" %}"></a>
+                </div>
+          </div>
+
+
+ </div>
+{% endblock %}

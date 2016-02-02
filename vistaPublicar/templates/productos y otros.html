@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block contenido %}
+    <style>
+        .boton{ cursor:pointer}
+    </style>
+
+    <div class="main-content">
+        <form action="#" method="_POST" name="nombreForm" id="miFormulario"role="form">
+         <fieldset> <!-- sirve para agrupar los elementos. crear un recuadro que rodea a los elementos de formulario colocados dentro de ella -->
+            <legend align="left">Texto</legend><!-- sirve para nombrar o etiquetar un grupo creado con FIELDSET. -->
+
+           <!-- </label>: Nombre de la seccion del formulario (email, apellidos...)
+                form=""indica a q formulario pertenece, aunq no se encuentre entre las etiquetas del formulario
+                for="" con quien esta relacionado este label, puede ser q label no tenga etiqueta de cierre y asi le indicamos a q elemento hace referencia
+                Podemos poner input dentro de lable o no.-->
+           <label form="miFormulario" for="Email1">Email
+               <!--<input>:
+                   placeholder="" descripción q podemos poner dentro del control.
+                   required para obligar a rellenar ese campo.
+                   name="" para llamarlo desde JS o PHP
+                   id="" debe coincidir con el for-->
+              <input type="email" placeholder="Correo electrónico" required name="email" id="Email1">
+          </label>
+
+          <label form="miFormulario" for="telefono1">Telefono
+              <input type="tel" placeholder="Telefono" autofocus name="telefono" id="telefono1">
+          </label>
+
+          <label form="miFormulario" for="Nombre1">Nombre
+              <input type="email" placeholder="Nombre completo" required name="email" id="Nombre1">
+          </label>
+
+          <label form="miFormulario" for="Web1">Web
+              <input type="url" placeholder="http://" name="email" id="Web1">
+          </label>
+
+          <label form="miFormulario" for="Lista1">Escribe tu ciudad...
+              <input type="text" list="listaEspana" placeholder="Tu ciudad" name="listaEspana" id="Lista1">
+              <datalist id="listaEspana">
+                 <option>Andalucia</option>
+                 <option>Almeria</option>
+                 <option>Cadiz</option>
+                 <option>Cordoba</option>
+                 <option>Granada</option>
+                 <option>Huelva</option>
+                 <option>Jaen</option>
+                 <option>Malaga</option>
+                 <option>Madrid</option>
+                 <option>Sevilla</option>
+                 <option>Huesca</option>
+                 <option>Teruel</option>
+                 <option>Zaragoza</option>
+                 <option>Asturias</option>
+              </datalist>
+         </label>
+
+          <label form="miFormulario" for="buscar1">Buscar
+              <input type="search" placeholder="Buscar" name="buscar" id="buscar1">
+          </label>
+
+          <label form="miFormulario" for="password1">password
+              <input type="password" placeholder="password" name="password id="password1">
+          </label>
+     </fieldset>
+
+     <blockquote> <!-- sirve para agrupar los elementos. crear un recuadro que rodea a los elementos de formulario colocados dentro de ella -->
+            <legend align="left">Numericos</legend>
+            <label form="miFormulario" for="time1">Calendario (type="date")
+              <input type="date" name="mitiempo1" id="time1">
+            </label>
+
+            <label form="miFormulario" for="time2">Hora (type="time")
+              <input type="time" name="mitiempo2" id="time2">
+            </label>
+
+           <label form="miFormulario" for="time3">Fecha (type="datetime")<!-- no calendario. Inicializamos el valor con value=""-->
+              <input type="datetime" value="01/01/1978 08:30" name="mitiempo3" id="time3">
+            </label>
+
+           <label form="miFormulario" for="time4">Fecha 2 (type="datetime-local")
+              <input type="datetime-local" name="mitiempo4" id="time4">
+           </label>
+
+           <label form="miFormulario" for="time5">Mes (type="month")
+              <input type="month" name="mitiempo5" id="time5">
+           </label>
+
+          <label form="miFormulario" for="time6">Semana (type="week")
+              <input type="week" name="mitiempo6" id="time6">
+           </label>
+
+          <label form="miFormulario" for="time7">tiempo +3 (type="time")
+              <input type="time" step="3" name="mitiempo7" id="time7"> <!-- no funciona-->
+           </label>
+    </blockquote>
+
+    <fieldset>
+            <legend align="left">Botones</legend>
+
+            <label form="miFormulario" for="Boton1">
+              <input class="boton" type="submit" value="Nuestro nombre para el envio" name="miBoton1" id="Boton1">
+           </label>
+
+           <label form="miFormulario" for="Boton2">
+              <input class="boton" type="reset" value="Nuestro nombre para el borrado" name="miBoton2" id="Boton2">
+           </label>
+    </fieldset>
+  </form>
+<!-- Nombre: <input type="text" name="Nombre" placeholder="Escribe tu nombre" required>
+
+Email<input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com" required/>
+  -->
+    </div>
+
+
+
+
+{% endblock contenido %}

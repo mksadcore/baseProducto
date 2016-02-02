@@ -201,6 +201,89 @@
           background-color: #ffffff;
         }
     </style>
+    <style>
+                .barra {background: rgb(255,255,255); /*Todo este código largo es el degradado gris para la barra */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ3JSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNmQ2ZDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(247,247,247,1) 47%, rgba(214,214,214,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(247,247,247,1)), color-stop(100%,rgba(214,214,214,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 47%,rgba(214,214,214,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 47%,rgba(214,214,214,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 47%,rgba(214,214,214,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 47%,rgba(214,214,214,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=0 ); /* IE6-8 */
+          /*Hasta aquí llega el código del degradado para la barra*/
+
+          /*Ancho de la barra*/
+         width:795px;
+
+        margin:0 auto;
+          font-family:trebuchet MS,sans-serif;
+        position:relative;}
+
+        /*Aquí empieza el menú*/
+
+        /*La barra principal es una lista de elementos (Unordered List, identificado con la clase .menu-principal*/
+        .menu-principal {margin:0 auto; width:100%; list-style-type:none; height:25px;   padding:0; border:1px solid #ccc; z-index:1000; position:relative; box-sizing:border-box;}
+
+        /*Elemento del menú: Aquí se definen los botones del menú principal, que son elementos de lista (li)*/
+        .menu-principal  li {width:157.5px;float:left; box-sizing:border-box; border-left:1px solid #ccc; padding:5px 0; text-align:center;}
+
+        .menu-principal  li:first-child{border:none;}
+        .menu-principal  li a {padding:10px; text-decoration:none; color:#222; font-weight:bold; }
+
+        .menu-principal  li:hover  { background:#eee; border-bottom:4px solid !important; box-sizing:border-box;}
+        /*Aquí se definen los colores del borde inferior de cada uno de los botones principales*/
+        .menu-principal  li:first-child:hover {border-bottom-color:#12b4db!important;}
+        .menu-principal  li:nth-child(2) {border-bottom-color:#588f1a!important;}
+        .menu-principal  li:nth-child(3) {border-bottom-color:#fbe10e!important;}
+        .menu-principal  li:nth-child(4) {border-bottom-color:#64696d!important;}
+        .menu-principal  li:nth-child(5) {border-bottom-color:#e63805!important;}
+
+
+        /*Aquí se esconde el sub-menú por defecto*/
+        .menu-principal  ul {visibility:hidden;opacity:0; -webkit-transition: all .5s ease-out;
+        -moz-transition: all .5s ease-out;
+        -ms-transition: all .5s ease-out;
+        -o-transition: all .5s ease-out;
+        transition: all .5s ease-out; position:absolute; z-index:0; margin-top:0; border:none;  width:auto; list-style-type: none; padding:0;}
+        /*Aquí se ajusta el sub-menú para que se ordene de forma horizontal*/
+        .menu-principal  ul li {background:#fff;float:left; border:1px dotted #ccc!important; width:auto; }
+        /*Aquí se le da un color de fondo al botón del sub-menú cuando es presionado*/
+        .menu-principal  ul li:hover {background:#eee; border:1px solid #ccc!important;}
+        .menu-principal ul li:first-child:hover {border:1px solid #ccc!important;}
+
+        /*Aquí se revela el sub-menú al pasar el mouse por un elemento del menú principal que lo contenga*/
+
+        .menu-principal  li:hover ul {visibility:visible;  opacity:1; margin-top:10px; }
+        /*Aquí se arregla el margen de los botones del sub-menú*/
+
+
+        /*Aquí termina el menú*/
+
+    </style>
+    <style>
+
+                #containerEx3 {
+        width: 800px;
+        margin: 0 auto;
+        }
+        .ex3 img {
+        margin: 20px;
+        border: 5px solid #eee;
+        -webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+        -moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+        box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        }
+        .ex3 img:hover {
+        -webkit-transform: rotate(-7deg);
+        -moz-transform: rotate(-7deg);
+        -ms-transform: rotate(-7deg);
+        transform: rotate(-7deg);
+        }
+    </style>
     <script>
         $('#myModal').on('shown.bs.modal', function () {
           $('#myInput').focus()
@@ -338,7 +421,7 @@
           <span class="or"> | </span>
           <div class="login">
                   {% if request.user.is_authenticated %}
-                      <a href="{% url 'logout' %}"> Salir</a>
+                      <a href="#"> Salir</a>
                 {% else %}
                       <div data-toggle="modal" data-target="#myModal">
                           <a title="Login" href="#"><span>Ingresar</span></a>
@@ -1074,9 +1157,10 @@
               </div>
 
               <div class="col-xs-6 col-sm-8">
-                  {% block conenido %}
+                  {% block contenido %}
 
-                  {% endblock %}
+
+                  {% endblock contenido %}
               </div>
 
               <div class="col-xs-6 col-sm-2">
@@ -1298,4 +1382,6 @@ fullScreenOffsetContainer: ''
 </script>
 </body>
 </html>
+
+
 

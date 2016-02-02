@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block contenido %}
+ <style>
+
+ </style>
+
+<h1>Llena el Formulario</h1>
+    <div class="main-content">
+        <div class="class-row">
+            <div class="col-sm-6">
+            <img alt="img2" width="350" height="350" src="{% static "images/inmuebles-01.jpg" %}">
+            </div>
+            <div class="col-sm-6">
+                <form action="#">
+
+                 <select name="inmuebles" required="" title="Elige una categoría"  size="12" data-path="">
+                    <li><a href="#">Selecciona Categoría</a></li>
+                    <option value="Inmuebles">Casas</option>
+                    <option value="Inmuebles">Departamentos</option>
+                    <option value="Inmuebles">Locales</option>
+                    <option value="Inmuebles">Naves Industriales</option>
+                    <option value="Inmuebles">Bodegas</option>
+                    <option value="Inmuebles">Cuartos</option>
+                    <option value="Inmuebles">Edificios</option>
+                    <option value="Inmuebles">Haciendas</option>
+                    <option value="Inmuebles">locales Comerciales</option>
+                    <option value="Inmuebles">Oficinas</option>
+                    <option value="Inmuebles">------------------------------------------</option>
+                    </select>
+                  <br><br>
+                 </form>
+            </div>
+        </div>
+  </div>
+
+    {% block contenido1 %}
+
+        {% endblock contenido1 %}
+
+
+
+{% endblock contenido %}

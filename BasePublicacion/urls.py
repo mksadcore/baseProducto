@@ -19,4 +19,13 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'vistaPublicar.views.base', name='base'),
+    url(r'^servicios/', 'vistaPublicar.views.servicios', name='servicios'),
+    url(r'^categorias/', 'vistaPublicar.views.categoria', name='categoria'),
+    url(r'^productos/', 'vistaPublicar.views.productos', name='productos'),
+    url(r'^casas/', 'vistaPublicar.views.casas', name='casas'),
+    url(r'^departamentos/', 'vistaPublicar.views.departamentos', name='departamentos'),
+    url(r'^locales/', 'vistaPublicar.views.locales', name='locales'),
+    url(r'^naves/', 'vistaPublicar.views.navesIndustriales', name='naves'),
+    url(r'^bodegas/', 'vistaPublicar.views.bodegas', name='badegas'),
+
 ]

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block contenido %}
+    <div class="col-row">
+        <div class="col-sm-2"></div>
+
+         <div class="col-sm-8">
+           <div class="main-content">
+                <h1>Locales</h1>
+                <form enctype="multipart/form-data" method="post">{% csrf_token %}
+                 {{ form.as_p }}
+                <button type="submit" class="save btn-default">Publicar</button>
+
+                </form>
+           </div>
+         </div>
+       <div class="col-sm-2"></div>
+    </div>
+
+{% endblock contenido %}
