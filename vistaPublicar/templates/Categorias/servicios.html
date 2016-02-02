@@ -13,26 +13,45 @@
             </div>
             <div class="col-sm-6">
                 <form action="#">
+                    <ul>
+                        <li><a href="#">Selecciona Categoría</a></li>
+                        <li id="locales" onclick="loadDoc()">Locales</li>
+                     </ul>
 
                  <select name="inmuebles" required="" title="Elige una categoría"  size="12" data-path="">
-                    <li><a href="#">Selecciona Categoría</a></li>
-                    <option value="Inmuebles">Casas</option>
-                    <option value="Inmuebles">Departamentos</option>
-                    <option value="Inmuebles">Locales</option>
-                    <option value="Inmuebles">Naves Industriales</option>
-                    <option value="Inmuebles">Bodegas</option>
-                    <option value="Inmuebles">Cuartos</option>
-                    <option value="Inmuebles">Edificios</option>
-                    <option value="Inmuebles">Haciendas</option>
-                    <option value="Inmuebles">locales Comerciales</option>
-                    <option value="Inmuebles">Oficinas</option>
-                    <option value="Inmuebles">------------------------------------------</option>
+
+                        <option value="Inmuebles" id="locales" onclick="loadDoc()">Casas</option>
+                        <option value="Inmuebles">Departamentos</option>
+                        <option value="Inmuebles">Locales</option>
+                        <option value="Inmuebles">Naves Industriales</option>
+                        <option value="Inmuebles">Bodegas</option>
+                        <option value="Inmuebles">Cuartos</option>
+                        <option value="Inmuebles">Edificios</option>
+                        <option value="Inmuebles">Haciendas</option>
+                        <option value="Inmuebles">locales Comerciales</option>
+                        <option value="Inmuebles">Oficinas</option>
+                        <option value="Inmuebles">------------------------------------------</option>
+
                     </select>
                   <br><br>
                  </form>
             </div>
         </div>
   </div>
+
+
+        <script type="text/javascript">
+            function loadDoc() {
+              var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                  document.getElementById("locales").innerHTML = xhttp.responseText;
+                }
+              };
+              xhttp.open("GET", "Categorias/locales.html", true);
+              xhttp.send();
+            }
+        </script>
 
     {% block contenido1 %}
 
